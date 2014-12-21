@@ -26,3 +26,31 @@ Extracts only the measurements on the mean and standard deviation for each measu
 Uses descriptive activity names to name the activities in the data set
 Appropriately labels the data set with descriptive variable names. 
 From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+A DESCRIPTION OF HOW THE SCRIPT WORKS:
+setwd("~/GettingCleaningData/")
+
+list.files()
+
+##This script assumes that wearables.zip has been fully unzipped and the following files are in the wd ready to be read with the read.table function:
+ ####activity_labels.txt; features.txt; test/; train/
+
+## Do a row bind and column bind
+
+> ##Read the features data and filter it so we have only features that have mean() or standard deviations()
+
+##FILTER only data with mean() and std()
+
+# select only the means and standard deviations from data
+# increment by 2 because data has subjects and labels in the beginning
+
+# read the labels (activities_labels.txt data)
+
+# first make a list of the current column names and feature names
+# then tidy that list: by removing every non-alphabetic character and converting to lowercase
+
+# find the mean for each combination of subject and label with aggregate function
+
+# write the data set in your computer as a txt file created with write.table() using row.name=FALSE
+ 
+#check your wd to make sure it is saved there before uploading 
